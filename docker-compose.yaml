@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  todo-postgres:
+    image: postgres:14-alpine
+    container_name: msu
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: msu
+      POSTGRES_USER: msu
+      POSTGRES_PASSWORD: msu

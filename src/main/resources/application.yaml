@@ -1,0 +1,14 @@
+server:
+  port: 3000
+
+spring:
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/msu
+    username: msu
+    password: msu
+  jpa:
+    hibernate:
+      ddl-auto: update

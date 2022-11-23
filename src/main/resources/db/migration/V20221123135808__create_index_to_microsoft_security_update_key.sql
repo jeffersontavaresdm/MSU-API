@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX index_msu_key ON microsoft_security_update (key);
