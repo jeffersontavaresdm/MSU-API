@@ -1,9 +1,9 @@
-package processoseletivo_seplag.entity;
+package msu_api.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
-import processoseletivo_seplag.entity.dto.MicrosoftSecurityUpdateDTO;
+import msu_api.entity.dto.MicrosoftSecurityUpdateDTO;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

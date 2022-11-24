@@ -1,7 +1,7 @@
-package processoseletivo_seplag.repository;
+package msu_api.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import processoseletivo_seplag.entity.MicrosoftSecurityUpdate;
+import msu_api.entity.MicrosoftSecurityUpdate;
 
 public interface MicrosoftSecurityUpdateRepository extends JpaRepository<MicrosoftSecurityUpdate, Long> {
   MicrosoftSecurityUpdate findByKey(String key);

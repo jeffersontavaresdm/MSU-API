@@ -1,4 +1,4 @@
-package processoseletivo_seplag.utils;
+package msu_api.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

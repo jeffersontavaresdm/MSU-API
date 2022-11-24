@@ -1,8 +1,8 @@
-package processoseletivo_seplag.entity.dto;
+package msu_api.entity.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import processoseletivo_seplag.entity.MicrosoftSecurityUpdate;
+import msu_api.entity.MicrosoftSecurityUpdate;
 
 import java.time.OffsetDateTime;
 

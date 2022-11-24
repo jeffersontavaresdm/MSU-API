@@ -12,3 +12,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+msu-api:
+  baseUrl: "https://api.msrc.microsoft.com/cvrf/v2.0"

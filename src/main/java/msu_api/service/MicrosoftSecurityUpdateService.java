@@ -1,9 +1,9 @@
-package processoseletivo_seplag.service;
+package msu_api.service;
 
 import org.springframework.stereotype.Service;
-import processoseletivo_seplag.entity.MicrosoftSecurityUpdate;
-import processoseletivo_seplag.entity.dto.MicrosoftSecurityUpdateDTO;
-import processoseletivo_seplag.repository.MicrosoftSecurityUpdateRepository;
+import msu_api.entity.MicrosoftSecurityUpdate;
+import msu_api.entity.dto.MicrosoftSecurityUpdateDTO;
+import msu_api.repository.MicrosoftSecurityUpdateRepository;
 
 import java.util.List;
 

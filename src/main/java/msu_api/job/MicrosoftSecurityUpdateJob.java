@@ -1,12 +1,12 @@
-package processoseletivo_seplag.job;
+package msu_api.job;
 
 import org.slf4j.Logger;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import processoseletivo_seplag.api.MicrosoftSecurityUpdateAPI;
-import processoseletivo_seplag.entity.MicrosoftSecurityUpdate;
-import processoseletivo_seplag.repository.MicrosoftSecurityUpdateRepository;
-import processoseletivo_seplag.utils.LoggerUtils;
+import msu_api.api.MicrosoftSecurityUpdateAPI;
+import msu_api.entity.MicrosoftSecurityUpdate;
+import msu_api.repository.MicrosoftSecurityUpdateRepository;
+import msu_api.utils.LoggerUtils;
 
 @Component
 public class MicrosoftSecurityUpdateJob {
