@@ -1,12 +1,12 @@
 package msu_api.job;
 
-import org.slf4j.Logger;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 import msu_api.api.MicrosoftSecurityUpdateAPI;
 import msu_api.entity.MicrosoftSecurityUpdate;
 import msu_api.repository.MicrosoftSecurityUpdateRepository;
 import msu_api.utils.LoggerUtils;
+import org.slf4j.Logger;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 @Component
 public class MicrosoftSecurityUpdateJob {
@@ -32,21 +32,23 @@ public class MicrosoftSecurityUpdateJob {
 
       securityUpdates.forEach(dto -> {
         if (!entityKeys.contains(dto.getId())) {
-          logger.info("Saving entity...");
+          logger.info("Saving securityUpdate...");
 
-          var entity = repository.save(dto.toEntity());
+          var securityUpdate = repository.save(dto.toEntity());
 
-          logger.info("Entity saved!. Entity: {}", entity);
+          logger.info("Entity saved!. Entity: {}", securityUpdate);
         } else {
-          logger.info("Updating entity...");
+          logger.info("Updating securityUpdate...");
 
-          MicrosoftSecurityUpdate entity = repository.findByKey(dto.getId());
+          MicrosoftSecurityUpdate securityUpdate = repository.findByKey(dto.getId());
 
-          var updatedEntity = repository.save(entity.copy(entity.getId(), dto));
+          var updatedSecurityUpdate = repository.save(securityUpdate.copy(securityUpdate.getId(), dto));
 
-          logger.info("Entity updated successfully! Entity: {}", updatedEntity);
+          logger.info("Entity updated successfully! Entity: {}", updatedSecurityUpdate);
         }
       });
+    } else {
+      logger.info("No Security Updates to change or save");
     }
   }
 }
