@@ -8,13 +8,13 @@
         <version>2.7.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>processoseletivo_seplag</groupId>
-    <artifactId>processo-seletivo_SEPLAG</artifactId>
+    <groupId>msu-api</groupId>
+    <artifactId>msu-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>processo-seletivo_SEPLAG</name>
-    <description>processo-seletivo_SEPLAG</description>
+    <name>msu-api</name>
+    <description>msu-api</description>
     <properties>
-        <java.version>19</java.version>
+        <java.version>18</java.version>
     </properties>
     <dependencies>
         <dependency>

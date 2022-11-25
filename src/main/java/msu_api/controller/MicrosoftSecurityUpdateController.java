@@ -18,7 +18,7 @@ public class MicrosoftSecurityUpdateController {
     this.microsoftSecurityUpdateService = microsoftSecurityUpdateService;
   }
 
-  @GetMapping("/list")
+  @GetMapping("/updates")
   public List<MicrosoftSecurityUpdateDTO> list() {
     return microsoftSecurityUpdateService.list();
   }
