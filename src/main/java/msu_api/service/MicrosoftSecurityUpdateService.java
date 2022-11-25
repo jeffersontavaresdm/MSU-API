@@ -4,7 +4,6 @@ import msu_api.entity.MicrosoftSecurityUpdate;
 import msu_api.repository.MicrosoftSecurityUpdateRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
 import java.util.List;
 
 @Service
