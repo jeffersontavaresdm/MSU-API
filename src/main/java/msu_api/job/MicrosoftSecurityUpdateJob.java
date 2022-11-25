@@ -25,12 +25,12 @@ public class MicrosoftSecurityUpdateJob {
 
   @Scheduled(initialDelay = 1_000, fixedDelay = 300_000)
   public void run() {
-    var microsoftSecurityUpdatePayloads = api.updates();
+    var securityUpdates = api.getSecurityUpdates();
 
-    if (!microsoftSecurityUpdatePayloads.isEmpty()) {
+    if (!securityUpdates.isEmpty()) {
       var entityKeys = repository.findAll().stream().map(MicrosoftSecurityUpdate::getKey).toList();
 
-      microsoftSecurityUpdatePayloads.forEach(dto -> {
+      securityUpdates.forEach(dto -> {
         if (!entityKeys.contains(dto.getId())) {
           logger.info("Saving entity...");
 

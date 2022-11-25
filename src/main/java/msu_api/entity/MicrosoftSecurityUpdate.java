@@ -49,18 +49,6 @@ public class MicrosoftSecurityUpdate {
     this.cvrfUrl = cvrfUrl;
   }
 
-  public MicrosoftSecurityUpdateDTO toDTO() {
-    return new MicrosoftSecurityUpdateDTO(
-      this.key,
-      this.alias,
-      this.documentTitle,
-      this.severity,
-      this.initialReleaseDate,
-      this.currentReleaseDate,
-      this.cvrfUrl
-    );
-  }
-
   public MicrosoftSecurityUpdate copy(Long entityID, MicrosoftSecurityUpdateDTO dto) {
     return new MicrosoftSecurityUpdate(
       this.id = entityID,

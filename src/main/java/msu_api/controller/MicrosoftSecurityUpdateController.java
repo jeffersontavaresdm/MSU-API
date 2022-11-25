@@ -1,10 +1,10 @@
 package msu_api.controller;
 
+import msu_api.entity.MicrosoftSecurityUpdate;
+import msu_api.service.MicrosoftSecurityUpdateService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import msu_api.entity.dto.MicrosoftSecurityUpdateDTO;
-import msu_api.service.MicrosoftSecurityUpdateService;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class MicrosoftSecurityUpdateController {
   }
 
   @GetMapping("/updates")
-  public List<MicrosoftSecurityUpdateDTO> list() {
+  public List<MicrosoftSecurityUpdate> list() {
     return microsoftSecurityUpdateService.list();
   }
 }

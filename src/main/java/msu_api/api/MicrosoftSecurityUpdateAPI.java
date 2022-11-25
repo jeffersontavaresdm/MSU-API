@@ -25,7 +25,7 @@ public class MicrosoftSecurityUpdateAPI {
   @Value("${msu-api.baseUrl}")
   private String baseUrl;
 
-  public List<MicrosoftSecurityUpdateDTO> updates() {
+  public List<MicrosoftSecurityUpdateDTO> getSecurityUpdates() {
     URI uri = client.newURIBuilder(baseUrl + "/updates").build();
 
     ODataEntitySetIteratorRequest<ClientEntitySet, ClientEntity> request = client

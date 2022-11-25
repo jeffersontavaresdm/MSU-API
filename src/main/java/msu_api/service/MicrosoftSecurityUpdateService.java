@@ -1,10 +1,10 @@
 package msu_api.service;
 
-import org.springframework.stereotype.Service;
 import msu_api.entity.MicrosoftSecurityUpdate;
-import msu_api.entity.dto.MicrosoftSecurityUpdateDTO;
 import msu_api.repository.MicrosoftSecurityUpdateRepository;
+import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -16,11 +16,7 @@ public class MicrosoftSecurityUpdateService {
     this.microsoftSecurityUpdateRepository = microsoftSecurityUpdateRepository;
   }
 
-  public List<MicrosoftSecurityUpdateDTO> list() {
-    return microsoftSecurityUpdateRepository
-      .findAll()
-      .stream()
-      .map(MicrosoftSecurityUpdate::toDTO)
-      .toList();
+  public List<MicrosoftSecurityUpdate> list() {
+    return microsoftSecurityUpdateRepository.findByOrderByIdAsc();
   }
 }
