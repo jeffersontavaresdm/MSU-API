@@ -48,7 +48,7 @@ public class MicrosoftSecurityUpdateJob {
         }
       });
     } else {
-      logger.info("No Security Updates to change or save");
+      logger.info("No Security Updates to create or update");
     }
   }
 }
