@@ -1,14 +1,14 @@
 package msu_api.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 import msu_api.entity.dto.MicrosoftSecurityUpdateDTO;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.time.OffsetDateTime;
 
 @Entity
@@ -29,7 +29,8 @@ public class MicrosoftSecurityUpdate {
   private OffsetDateTime currentReleaseDate;
   private String cvrfUrl;
 
-  public MicrosoftSecurityUpdate() {}
+  public MicrosoftSecurityUpdate() {
+  }
 
   public MicrosoftSecurityUpdate(
     String key,

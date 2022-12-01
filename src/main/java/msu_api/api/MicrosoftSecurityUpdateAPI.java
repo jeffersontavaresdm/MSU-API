@@ -1,7 +1,6 @@
 package msu_api.api;
 
 import msu_api.entity.dto.MicrosoftSecurityUpdateDTO;
-import msu_api.exception.dto.ApiErrorDTO;
 import msu_api.utils.LoggerUtils;
 import org.apache.olingo.client.api.ODataClient;
 import org.apache.olingo.client.api.communication.ODataClientErrorException;
@@ -14,6 +13,7 @@ import org.apache.olingo.client.core.ODataClientFactory;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ProblemDetail;
 import org.springframework.stereotype.Component;
 
 import java.net.URI;
@@ -44,7 +44,10 @@ public class MicrosoftSecurityUpdateAPI {
     try {
       response = request.execute();
     } catch (ODataClientErrorException exception) {
-      var error = new ApiErrorDTO(HttpStatus.BAD_REQUEST, exception.getStatusLine().getReasonPhrase());
+      var error = ProblemDetail.forStatus(HttpStatus.BAD_REQUEST);
+      error.setTitle(exception.getStatusLine().getReasonPhrase());
+      error.setDetail(exception.getODataError().toString());
+
       logger.error("Error executing request. Error: {}", error);
     }
 
